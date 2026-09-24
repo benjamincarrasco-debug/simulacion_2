@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Benjamin Carrasco">
-    <title>Taco Palace</title>
+    <title>Biblioteca Horizonte</title>
     <link rel="stylesheet" href="static/css/style.css">
 </head>
 
@@ -13,14 +13,14 @@
     <header>
         <nav class="navbar">
             <div class="takito">
-                <img src="static/images/logo.png" alt="taco" class="logo">
-                <h1><span class="taco">Taco</span>Palace</h1>
+                <img src="static/images/libro.jfif" alt="taco" class="logo">
+                <h1>Biblioteca <br><span class="taco">Horizonte</span></h1>
             </div>
             <div class="compra">
                 <div class="gmail">
-                    <input id="gmail" type="text" placeholder="email"><button id="loginn">Login</button>
+                    <input id="gmail" type="text" placeholder="email"><button id="loginn">Ingresar</button>
                 </div>
-                <img src="static/images/carrito.png" alt="carro" class="carro">
+                <img src="static/images/compra.jfif" alt="carro" class="carro">
                 <h2 class="numerp" id="carrito">0</h2>
             </div>
         </nav>
@@ -28,33 +28,33 @@
     <main class="container">
         <section class="comida">
             <div class="plato">
-                <img src="static/images/enchiladas.jpg" alt="enchiladas" class="comidi">
-                <p>Enchiladas</p>
+                <img src="static/images/libro2.jfif" alt="enchiladas" class="comidi">
+                <p>Novelas</p>
             </div>
 
             <div class="plato">
-                <img src="static/images/tacos.jpg" alt="tacos" class="comidi">
-                <p>Tacos</p>
+                <img src="static/images/ciencia.jfif" alt="tacos" class="comidi">
+                <p>Ciencia</p>
             </div>
 
             <div class="plato">
-                <img src="static/images/flautas.jpg" alt="flautas" class="comidi">
-                <p>Flautas</p>
+                <img src="static/images/historia.jfif" alt="flautas" class="comidi">
+                <p>Historia</p>
             </div>
 
             <div class="plato">
-                <img src="static/images/gorditas.jpg" alt="gorditas" class="comidi">
-                <p>Gorditas</p>
+                <img src="static/images/tecnologia.jfif" alt="gorditas" class="comidi">
+                <p>Tecnología</p>
             </div>
 
             <div class="plato">
-                <img src="static/images/tostadas.jpg" alt="tostadas" class="comidi">
-                <p>Tostadas</p>
+                <img src="static/images/artes.jfif" alt="tostadas" class="comidi">
+                <p>Artes</p>
             </div>
 
             <div class="plato">
-                <img src="static/images/enfrijoladas.jpg" alt="enfrijoladas" class="comidi">
-                <p>Enfrijoladas</p>
+                <img src="static/images/infatil.jfif" alt="enfrijoladas" class="comidi">
+                <p>Infatil</p>
             </div>
         </section>
 
@@ -64,25 +64,30 @@
         <section class="explorar">
             <div class="parteGrande">
                 <div class="desc">
-                    <p>La mejor <br> variedad en <br> platillos de comida <br>
-                        <strong>mexicana</strong>
+                    <strong>Descubre <br> Historia</strong>
+                    <p>
+                        Explora nuestra biblioteca virtual y encuentra libros para todoslos gusto.
+                        Conocimiento,aventura y mucho más al alcance de un clic.
+
                     </p>
-                    <p class="chiki">Contamos con <a href="#">servicio</a> a <br> <span class="nara">domicilio</span>
+                    <p class="chiki">Conocela Biblioteca Horizonte</span>
                     </p>
                 </div>
                 <div class="fotoCambia">
-                    <img src="static/images/comida-mexicana.jpg" alt="comida-mexicana" class="cambia" id="foto">
+                    <video alt="comida-mexicana" class="cambia" id="foto" controls width="100%">
+                            <source src="mi-video.mp4" type="video/mp4">
+                        </video>
                 </div>
-
             </div>
             <div class="partePequena">
-                <h2>Recomdendados:</h2>
+                <h2> Libros Recomdendados:</h2>
 
                 <div class="orden">
-                    <img src="static/images/orden-tacos.jpg" alt="tacos" class="fotoOrden">
+                    <img src="static/images/cien años de soledad.jfif" alt="tacos" class="fotoOrden">
                     <div class="infoOrden">
                         <div class="oden">
-                            <p>Orden de Tacos</p>
+                            <p>Cien años de soledad</p>
+                            <p class="gris">Gabriel Garcia Márquez</p>
                             <a href="#">Ver mas...</a>
                         </div>
 
@@ -93,10 +98,25 @@
                 </div>
 
                 <div class="orden">
-                    <img src="static/images/orden-flautas.jpg" alt="flautas" class="fotoOrden">
+                    <img src="static/images/sapies.jfif" alt="flautas" class="fotoOrden">
                     <div class="infoOrden">
                         <div class="oden">
-                            <p>Orden de Flautas</p>
+                            <p>Sapiens</p>
+                            <p class="gris">Yuval Noah Harari</p>
+                            <a href="#">Ver mas...</a>
+                        </div>
+
+                        <div class="botn">
+                            <button id="anadir2">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="orden">
+                    <img src="static/images/principito.jfif" alt="flautas" class="fotoOrden">
+                    <div class="infoOrden">
+                        <div class="oden">
+                            <p>El pricipito</p>
+                            <p class="gris">Antoine de Saint-Exupéry</p>
                             <a href="#">Ver mas...</a>
                         </div>
 
@@ -107,6 +127,8 @@
                 </div>
 
             </div>
+            </div>
+
         </section>
     </main>
     <script src="static/js/script.js"></script>
