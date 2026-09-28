@@ -1,35 +1,46 @@
-console.log("Conexion exitosa...")
+document.addEventListener("DOMContentLoaded", () => {
+  const loginForm = document.getElementById("authForm");
+  const emailInput = document.getElementById("emailUser");
 
-let numCarrito = document.querySelector("#carrito");
-let anadir = document.querySelector("#anadir");
-let anadir2 = document.querySelector("#anadir2");
+  if (loginForm) {
+    loginForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const userEmail = emailInput.value.trim();
 
-anadir.addEventListener("click", function () {
-    let contador = parseInt(numCarrito.innerText);
-    numCarrito.innerText = contador + 1;
-});
-anadir2.addEventListener("click", function () {
-    let contador = parseInt(numCarrito.innerText);
-    numCarrito.innerText = contador + 1;
-});
+      if (userEmail !== "") {
+        alert(`¡Bienvenido/a! Has ingresado con el correo: ${userEmail}`);
+        emailInput.value = "";
+      }
+    });
+  }
 
+  const addButtons = document.querySelectorAll(".add-btn");
+  const countBadge = document.querySelector(".counter-val");
 
+  if (countBadge && addButtons.length > 0) {
+    let selectedCount = 0;
 
+    addButtons.forEach((button) => {
+      button.addEventListener("click", (event) => {
+        event.preventDefault();
+        selectedCount++;
+        countBadge.textContent = selectedCount;
+      });
+    });
+  }
 
-const foto = document.getElementById("foto")
+  const mediaFrame = document.getElementById("mediaFrame");
+  const videoPlayer = document.getElementById("featuredVideo");
 
+  if (mediaFrame && videoPlayer) {
+    mediaFrame.addEventListener("mouseenter", () => {
+      mediaFrame.classList.add("is-hovered");
+      videoPlayer.pause();
+    });
 
-foto.addEventListener("mouseover", function () {
-    foto.src = "static/images/comida-mexicana2.jpg"
-})
-
-foto.addEventListener("mouseout", function () {
-    foto.src = "static/images/comida-mexicana.jpg"
-})
-
-
-const button = document.querySelector("#loginn")
-button.addEventListener("click", function () {
-    let email = document.getElementById("gmail").value;
-    alert(`Hola, ${email}`)
+    mediaFrame.addEventListener("mouseleave", () => {
+      mediaFrame.classList.remove("is-hovered");
+      videoPlayer.play();
+    });
+  }
 });
